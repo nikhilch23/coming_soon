@@ -16,6 +16,5 @@ def submit():
 		with open('list.csv','w') as inFile:
 			writer=csv.DictWriter(inFile, fieldnames=fieldnames)
 			writer.writerow({name:'name', emailid:'emailid'})
-		return "Thanks"	
-
+		return render_template('thank.html')
 app.run(port=5002)
