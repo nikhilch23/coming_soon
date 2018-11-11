@@ -23,6 +23,6 @@ def submit():
 			writer=csv.writer(inFile)
 			writer.writerow(fieldnames)
 	
-	return(redirect(url_for('main')))
+	return render_template('thank.html')
 
 app.run(port=5002)
