@@ -18,9 +18,7 @@ def submit():
 	if request.method =='POST':
 		name = request.form['name']
 		emailid = request.form['email-id']
-		print("Yaa")
 		fieldnames = [name,emailid]
-		print(fieldnames)
 		with open('list.csv','a') as inFile:
 			writer=csv.writer(inFile)
 			writer.writerow(fieldnames)
